@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -7,13 +8,11 @@
  */
 int main(void)
 {
-	int n;
+	char ch;
 
-	n = '0';
-	while (n <= '9')
+	for (ch = 'z'; ch >= 'a'; ch--)
 	{
-		putchar (n);
-		n++;
+		putchar (ch);
 	}
 	putchar ('\n');
 	return (0);
