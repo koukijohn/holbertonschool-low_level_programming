@@ -15,9 +15,14 @@ int _abs(int x)
 		x = (x * -1);
 		_putchar(x);
 	}
-	if (x > 0)
+	else if (x > 0)
 	{
 		x = (x * 1);
+		_putchar(x);
+	}
+	else
+	{
+		x = (x * 0);
 		_putchar(x);
 	}
 	return (0);
