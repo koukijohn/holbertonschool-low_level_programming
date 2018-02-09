@@ -5,7 +5,7 @@
  * @n: This is our helper function.
  * @t: This is our trial operand.
  *
- * Return: 
+ * Return: int
  */
 
 int primenumber(int n, int t) /* helper function where we declare 2 vars*/
@@ -22,7 +22,10 @@ int primenumber(int n, int t) /* helper function where we declare 2 vars*/
 }
 
 /**
+ * is_prime_number - This is our function for a prime number
+ * @n: This is a number
  *
+ * Return: int
  */
 
 int is_prime_number(int n)
