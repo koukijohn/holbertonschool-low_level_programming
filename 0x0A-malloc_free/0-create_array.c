@@ -4,6 +4,8 @@
 
 /**
  * *create_array - This function creates an array of characters and init w/ chr
+ * @size: This is the limit of the pointer
+ * @c: This is the specific character we are creating an array of.
  *
  * Return: NULL
  */
