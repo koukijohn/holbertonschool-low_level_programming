@@ -34,7 +34,5 @@ char *str_concat(char *s1, char *s2)
 		s3[x + y] = s2[y];
 	}
 	s3[x + y] = '\0';
-	if (s3[x+y] != '\0')
-		return (NULL);
 	return (s3);
 }
