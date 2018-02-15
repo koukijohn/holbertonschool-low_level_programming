@@ -18,6 +18,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	for (x = 0; str[x] != '\0'; x++)
+		;
 	GermGerm = malloc(sizeof(char) * x + 1);
 	if (GermGerm == NULL)
 		return (NULL);
