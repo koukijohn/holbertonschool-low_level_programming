@@ -12,18 +12,18 @@
 
 int *array_range(int min, int max)
 {
-	int *G, size, b;
+	int *G, b, x; /*pointer 4 array */
+	x = 0;
 
 	if (min > max)
 		return (NULL);
-	size = max - min;
-	G = malloc(sizeof(int) * size + 1);
-	if (!G) /* fail case */
+	G = malloc(sizeof(int) * ((max - min) + 1)); /* max - min 4 difference */
+	if (G == NULL) /* test/fail case */
 		return (NULL);
-	for (b = 0; b <= size; b++)
+	for (b = min; b <= max; b++) /* */
 	{
-		G[b] = min;
-		min++;
+		G[x] = b;
+		x++; /* b & x wll ++ until done w/ loop */
 	}
 	return (G);
 }
