@@ -2,18 +2,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *_strcpy(char *dest, char *src);
-
 /**
+ * *string_nconcat - This function concatentates 2 strings (s2 <= n)
+ * @s1: 1st string
+ * @s2: 2nd string.
+ * @n: This is the limit of s2.
  *
- *
- *
+ * Return: s3
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int x, y;
+	unsigned int x, y, g, b, sum, sum1;
 	char *s3;
+
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	for (x = 0; s1[x] != '\0'; x++) /* length of s1 */
 		;
@@ -21,40 +27,26 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	if (n >= y)
 	{
-		s3 = malloc(x + y + 1);
-		_strncat(s3, s2, n);
-		return (s3);
+		sum = x + y + 1;
+		s3 = malloc(sizeof(char) * sum);
+		if (s3 == NULL)
+			return (NULL);
 	}
 	else
 	{
-		s3 = malloc(x + n + 1);
-		_strncat(s3, s2, n);
-		return (s3);
+		sum1 = x + n + 1;
+		s3 = malloc(sizeof(char) * sum1);
+		if (s3 == NULL)
+			return (NULL);
 	}
-}
-
-/**
- * *_strncat - This is a function that concatentates two strings.
- * @n: The limit of the array.
- * @dest: This is the first string to append to.
- * @src: This is the second string to append from.
- *
- * Return: dest
- */
-
-char *_strncat(char *dest, char *src, int n)
-{
-        int g = 0;
-        int b = 0;
-
-        while (dest[g] != '\0')
-        {
-                g++;
-        }
-        while (src[b] != '\0' && b < n)
-        {
-                dest[g + b] = src[b];
-                b++;
-        }
-        return (dest);
+	for (g = 0; g < x; g++)
+	{
+		s3[g] = s1[g];
+	}
+	for (b = 0; b < y && b < n; b++)
+	{
+		s3[g + b] = s2[b];
+	}
+	s3[g + b] = '\0';
+	return (s3);
 }
