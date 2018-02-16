@@ -13,6 +13,7 @@
 int *array_range(int min, int max)
 {
 	int *G, b, x; /*pointer 4 array */
+
 	x = 0;
 
 	if (min > max)
