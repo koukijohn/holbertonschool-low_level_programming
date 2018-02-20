@@ -6,7 +6,6 @@
  * print_dog - Function that prints a struct dog
  * @d: This is the variable we are using
  *
- * Return: Void.
  */
 
 void print_dog(struct dog *d)
@@ -14,7 +13,7 @@ void print_dog(struct dog *d)
 	if (d == NULL) /*edge case that is given */
 		return;
 	if (d->name == NULL)
-		printf("Name: (nil)"); /* This is given*/
+		printf("Name: (nil)\n"); /* This is given*/
 	else
 	{
 		printf("Name: %s\n", d->name);
