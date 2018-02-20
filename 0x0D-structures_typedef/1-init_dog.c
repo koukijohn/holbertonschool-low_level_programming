@@ -14,10 +14,9 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d) /* This is initializing the variable d */
-	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
-	}
+	if (d == NULL) /* This is to check if d is valid */
+		return;
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
