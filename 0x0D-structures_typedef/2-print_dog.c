@@ -13,15 +13,15 @@ void print_dog(struct dog *d)
 {
 	if (d == NULL) /*edge case that is given */
 		return;
-	if (d -> name == NULL)
+	if (d->name == NULL)
 		printf("Name: (nil)\n"); /* This is given*/
 	else
 	{
 		printf("Name: %s\n", d->name);
 		printf("Age: %f\n", d->age);
 	}
-	if (d -> owner == NULL)
-                printf("Owner: (nil)\n");
+	if (d->owner == NULL)
+		printf("Owner: (nil)\n");
 	else
 		printf("Owner: %s\n", d->owner);
 }
