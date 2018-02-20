@@ -6,6 +6,7 @@
  * print_dog - Function that prints a struct dog
  * @d: This is the variable we are using
  *
+ * Return: Void.
  */
 
 void print_dog(struct dog *d)
