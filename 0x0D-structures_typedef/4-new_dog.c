@@ -45,24 +45,24 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *downer;
 	dog_t *doggo;
 
-	doggo = malloc(sizeof(dog_t)); /*We must malloc to create program*/
 	dname = _strdup(name); /*duplicating string to dname */
 	downer = _strdup(owner); /*duplicating string to downer */
-	if (doggo == NULL)
-	{
-		return (NULL);
-	}
 	if (dname == NULL)
 	{
-		free(doggo);
+		free(dname);
 		return (NULL);
 	}
 	if (downer == NULL)
 	{
 		free(dname);
-		free(doggo);
-		return (NULL);
+		free(downer);
+	        return (NULL);
 	}
+	doggo = malloc(sizeof(dog_t)); /*We must malloc to create program*/
+	if (doggo == NULL)
+        {
+                return (NULL);
+        }
 	doggo->name = dname;
 	doggo->age = age;
 	doggo->owner = downer;
