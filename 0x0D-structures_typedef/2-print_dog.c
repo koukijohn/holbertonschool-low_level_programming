@@ -14,7 +14,7 @@ void print_dog(struct dog *d)
 	if (d == NULL) /*edge case that is given */
 		return;
 	if (d->name == NULL)
-		printf("Name: (nil)\n"); /* This is given*/
+		printf("Name: (nil)"); /* This is given*/
 	else
 	{
 		printf("Name: %s\n", d->name);
