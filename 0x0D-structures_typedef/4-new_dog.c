@@ -56,13 +56,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(dname);
 		free(downer);
-	        return (NULL);
+		return (NULL);
 	}
 	doggo = malloc(sizeof(dog_t)); /*We must malloc to create program*/
 	if (doggo == NULL)
-        {
-                return (NULL);
-        }
+	{
+		free(dname);
+		free(downer);
+		return (NULL);
+	}
 	doggo->name = dname;
 	doggo->age = age;
 	doggo->owner = downer;
