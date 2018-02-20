@@ -14,15 +14,14 @@ void print_dog(struct dog *d)
 	if (d == NULL) /*edge case that is given */
 		return;
 	if (d->name == NULL)
-		printf("Name: (nil)\n"); /* This is given*/
-	if (d->owner == NULL)
-		printf("Owner: (nil)\n");
-	if (d->age < 0)
-		printf("Age: (nil)\n");
+		printf("Name: (nil)\n");
 	else
 	{
 		printf("Name: %s\n", d->name);
 		printf("Age: %f\n", d->age);
-		printf("Owner: %s\n", d->owner);
 	}
+        if (d->owner == NULL)
+		printf("Owner: (nil)\n");
+	else
+	        printf("Owner: %s\n", d->owner);
 }
