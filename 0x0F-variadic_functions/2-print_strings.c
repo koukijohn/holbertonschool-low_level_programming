@@ -23,13 +23,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (x = 0; x < n; x++)
 	{
 		mango = va_arg(apple, char *);
+		if (separator != NULL && x > 0)
+			printf("%s", separator);
 		if (mango == NULL)
 			printf("(nil)");
 		else
 			printf("%s", mango);
-
-		if (x > 0 && separator != NULL)
-			printf("%s", separator);
 	}
 
 	printf("\n");
