@@ -2,16 +2,16 @@
 #define VARIADIC_FUNCTIONS
 
 /**
- * struct args - struct arguments
+ * struct op - struct arguments
  * @args: These are the arguments being used like "f", "i", "s", "c"
  * @f: This is a function pointer to va_list
  */
 
-typedef struct args
+typedef struct op
 {
 	char *args; /*This points to "f", "i", "s", "c"*/
-	void (*f)(va_list);/*We name this function to pointer*/
-} Args;/*We name this struct hihi*/
+	void (*f)(va_list germo);/*We name this function to pointer*/
+} opx;
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
