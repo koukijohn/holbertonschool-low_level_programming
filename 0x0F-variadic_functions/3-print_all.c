@@ -39,9 +39,11 @@ void _printstring(va_list germo)
 
 	pointer = va_arg(germo, char*);
 	if (pointer == NULL)
+	{
 		printf("(nil)");
-	else
-		printf("%s", pointer);
+		return;
+	}
+	printf("%s", pointer);
 }
 
 /**
