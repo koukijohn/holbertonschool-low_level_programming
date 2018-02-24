@@ -19,7 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(goku, n);
 
 	if (separator == NULL)
-		return;
+		separator = "";
 
 	for (x = 0; x < n; x++)
 	{
