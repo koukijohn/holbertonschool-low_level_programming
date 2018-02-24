@@ -29,7 +29,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		printf("%s", mango);
 
 		if (separator == NULL)
-			return;
+			separator = "";
 		if (x < n - 1)
 			printf("%s", separator);
 	}
