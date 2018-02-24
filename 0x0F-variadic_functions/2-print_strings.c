@@ -24,11 +24,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		mango = va_arg(apple, char *);
 		if (mango == NULL)
-			printf("(nil)\n");
+			printf("(nil)");
 		else
 			printf("%s", mango);
 
-		if (x < n - 1 && separator != NULL)
+		if (x > 0 && separator != NULL)
 			printf("%s", separator);
 	}
 
