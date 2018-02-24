@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		mango = va_arg(apple, char *);
 		if (mango == NULL)
-			printf("(nil)\n");
+			printf("(nil)");
 
 		printf("%s", mango);
 
