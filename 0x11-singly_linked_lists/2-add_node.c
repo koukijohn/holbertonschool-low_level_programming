@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * *add_node - This function will print all of the elements of a list_t list.
+ * *add_node - This function adds new node at beginning of a linked list.
  * @head: This is our function we are adding a string to the beginning.
  * @str: This is the string that needs to be duplicated.
  *
