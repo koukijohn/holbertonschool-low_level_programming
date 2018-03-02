@@ -14,11 +14,6 @@ size_t list_len(const list_t *h)
 	const list_t *str = h; /*h == head/declare head first with linked list*/
 	size_t numbofnodes = 0;/*return #ofnodes*/
 
-	if (str == NULL)
-	{
-		printf("[0] (nil)");
-		exit(0);
-	}
 	while (str != NULL)
 	{
 		numbofnodes++;
