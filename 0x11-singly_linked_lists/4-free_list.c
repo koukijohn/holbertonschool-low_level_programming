@@ -4,10 +4,10 @@
 #include "lists.h"
 
 /**
+ * free_list - This is a function that frees a linked list.
+ * @head: Our linked list we are freeing.
  *
- *
- *
- *
+ * Return: Void.
  */
 
 void free_list(list_t *head)
