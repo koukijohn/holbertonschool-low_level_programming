@@ -12,25 +12,25 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new_node;
+	listint_t *newnode;
 	listint_t *traverser; /*This lets us move to the last node*/
 
-	new_node = malloc(sizeof(listint_t));/*This is to make our new node*/
-	if (new_node == NULL)
+	newnode = malloc(sizeof(listint_t));/*This is to make our new node*/
+	if (newnode == NULL)
 		return (NULL);
-	new_node->n = n;
-	new_node->next = NULL;
+	newnode->n = n;
+	newnode->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = new_node;
-		return (new_node);
+		*head = newnode;
+		return (newnode);
 	}
 
 	traverser = *head; /*This will go to the last node*/
 	while (traverser->next != NULL)
 		traverser = traverser->next;
-	traverser->next = new_node;
+	traverser->next = newnode;
 
 	return (*head);
 }
