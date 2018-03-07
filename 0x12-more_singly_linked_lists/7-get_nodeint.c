@@ -13,7 +13,7 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *list1, *list2;
-	unsigned int x;/*var to count index*/
+	unsigned int x = 0;/*var to count index*/
 
 	list1 = head;
 	list2 = head;
