@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int numofbits = 0;
 	unsigned int counter = 0;/*This is for our loop*/
-	unsigned long int flipper = n^m;/*num yuou get after n^m*/
+	unsigned long int flipper = n ^ m;/*num yuou get after n^m*/
 
 	while (counter < 63)
 	{
