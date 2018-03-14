@@ -28,7 +28,7 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		text_content = "";
 
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0400 | 0200);
+	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 /*0400/S_IRUSR read perm, 0200/S_IWUSR write perm*/
 	if (fd == -1)
 		return (-1);
