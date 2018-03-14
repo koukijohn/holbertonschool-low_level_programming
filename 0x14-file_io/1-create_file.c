@@ -19,10 +19,9 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	int length = 0;
 
-	while (*text_content != '\0')
+	while (text_content[length] != '\0')
 	{
 		length++;
-		text_content++;
 	}
 	if (filename == NULL)
 		return (-1);
