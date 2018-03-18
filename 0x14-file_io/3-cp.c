@@ -53,7 +53,7 @@ void exit_100(int fd)
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, reader, writer, closer;
-	char buffer[1024];
+	char *buffer[1024];
 
 	if (argc != 3)
 	{
