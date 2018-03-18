@@ -72,8 +72,7 @@ int main(int argc, char *argv[])
 		exit_99(argv[2]);
 	}
 /*reading and writing*/
-	reader = read(file_from, buffer, 1024);
-	while (reader != 0)
+	while ((reader = read(file_from, buffer, 1024)) != 0)
 	{
 		if (reader == -1)
 			exit_98(argv[1]);
