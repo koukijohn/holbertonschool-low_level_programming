@@ -2,7 +2,7 @@
 
 /**
  * add_dnodeint - Adds new node at beginning of doubly linked list.
- * @head: This is our doubly linked list.
+ * @head: This points to the head of our doubly linked list.
  * @n: Data from structure.
  *
  * Return: Address of new element, or NULL if failed.
