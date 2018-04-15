@@ -17,9 +17,6 @@ size_t print_dlistint(const dlistint_t *h)
 	numberofnodes = 0;
 	doublylinkedlist = NULL;
 
-	if (h == NULL)
-		return (0);
-
 	printf("%d\n", element);
 	numberofnodes++;
 	doublylinkedlist = h->next;
@@ -30,6 +27,5 @@ size_t print_dlistint(const dlistint_t *h)
 		numberofnodes++;
 		doublylinkedlist = doublylinkedlist->next;
 	}
-
 	return (numberofnodes);
 }
