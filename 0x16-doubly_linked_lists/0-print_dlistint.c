@@ -9,13 +9,11 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t numberofnodes;
-	dlistint_t *doublylinkedlist;
+	size_t numberofnodes = 0;
+	dlistint_t *doublylinkedlist = NULL;
 	int element;
 
 	element = h->n;
-	numberofnodes = 0;
-	doublylinkedlist = NULL;
 
 	if (h == NULL)
 		return (0);
