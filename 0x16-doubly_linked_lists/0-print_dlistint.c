@@ -19,7 +19,7 @@ size_t print_dlistint(const dlistint_t *h)
 	numberofnodes++;
 	doublylinkedlist = h->next;
 
-	while (doublylinkedlist != NULL)
+	while (doublylinkedlist)
 	{
 		printf("%d\n", doublylinkedlist->n);
 		numberofnodes++;
