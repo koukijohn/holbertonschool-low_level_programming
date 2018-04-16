@@ -22,7 +22,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (*h == NULL)
 		return (add_dnodeint(h, n));
 	if (idx == 0)
-		return (add_dnodeint(h, n));
+                return (add_dnodeint(h, n));
 	newelement = malloc(sizeof(dlistint_t));
 	if (newelement == NULL)
 		return (NULL);
@@ -44,6 +44,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			}
 			else
 			{
+				traverser->next = newelement;
+				newelement->prev = traverser;
 			}
 			return (newelement);
 		}
