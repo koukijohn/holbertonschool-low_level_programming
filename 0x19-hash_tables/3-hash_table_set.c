@@ -15,7 +15,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_element;
 	hash_node_t *traverser;
 
-        location = key_index((const unsigned char *)key, ht->size);
 	new_element = malloc(sizeof(hash_node_t *));
 	if (new_element == NULL)
 	{
@@ -25,9 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	if (key == NULL)
 		return (0);
-	new_element->key = strdup(key);
-	new_element->value = strdup(value);
-	new_element->next = ht->array[location];
+	location = key_index((const unsigned char *)key, ht->size);
 
 	traverser = ht->array[location];
 
@@ -42,6 +39,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		traverser = traverser->next;
 	}
 
+	new_element->key = strdup(key);
+	new_element->value = strdup(value);
+	new_element->next = ht->array[location];
 	ht->array[location] = new_element;
 
 	return (1);
