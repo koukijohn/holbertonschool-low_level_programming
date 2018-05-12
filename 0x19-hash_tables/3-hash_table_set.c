@@ -42,6 +42,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_element->key = strdup(key);
 	new_element->value = strdup(value);
 	new_element->next = ht->array[location];
+
 	ht->array[location] = new_element;
 
 	return (1);
