@@ -33,7 +33,7 @@ void hash_table_print(const hash_table_t *ht)
 			}
 			else
 			{
-				printf(",'%s': '%s'", hash_table->key,
+				printf(", '%s': '%s'", hash_table->key,
 				       hash_table->value);
 			}
 			hash_table = hash_table->next;
