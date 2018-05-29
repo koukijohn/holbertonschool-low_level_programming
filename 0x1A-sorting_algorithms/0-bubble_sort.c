@@ -21,10 +21,10 @@ void bubble_sort(int *array, size_t size)
 	}
 	if (size < 2)
 		return;
-	while (flag)
+	while (flag == 1)
 	{
-		flag = 0;
 		y = 0;
+		flag = 0;
 		while (y < size - 1)
 		{
 			if (array[y] > array[y + 1])
