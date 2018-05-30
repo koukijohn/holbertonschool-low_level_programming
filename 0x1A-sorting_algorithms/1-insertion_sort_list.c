@@ -1,9 +1,9 @@
 #include "sort.h"
 
 /**
- * swapper - This moves through the linked list.
- * @position: This is the 
- * @node: This
+ * inserter - This moves through the linked list.
+ * @position: This is the position that we are enter inserting.
+ * @node: This is the node we are inserting.
  *
  * Return: Void.
  */
@@ -40,7 +40,7 @@ void inserter(listint_t *position, listint_t *node)
 }
 
 /**
- * inserton_sort_list - sorts a doubly linked list of integers
+ * insertion_sort_list - sorts a doubly linked list of integers
  * @list: This is the doubly linked list we are sorting.
  *
  * Return: Void.
