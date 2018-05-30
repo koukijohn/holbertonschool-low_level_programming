@@ -11,7 +11,7 @@
 void selection_sort(int *array, size_t size)
 {
 	size_t x = 0;
-	size_t start = 0;
+	size_t traverser = 0;
 	int low = 0;
 	size_t low_index = 0;
 	int value_holder = 0;
@@ -20,27 +20,28 @@ void selection_sort(int *array, size_t size)
 		return;
 	if (size < 2)
 		return;
-	while (start < size)
+
+	while (traverser < size)
 	{
-		low = array[start];
-		low_index = start;
+		low = array[traverser];
+		low_index = traverser;
 		x = 0;  /*resets inner loop position*/
-		while ((x + start) < size)
+		while ((x + traverser) < size)
 		{
-			if (array[x + start] < low)
+			if (array[x + traverser] < low)
 			{
-				low = array[start + x];
-				low_index = start + x;
+				low = array[traverser + x];
+				low_index = traverser + x;
 			}
 			x++;
 		}
-		if (start != low_index)
+		if (traverser != low_index)
 		{
-			value_holder = array[start];
-			array[start] = array[low_index];
+			value_holder = array[traverser];
+			array[traverser] = array[low_index];
 			array[low_index] = value_holder;
 			print_array(array, size);
 		}
-		start++;
+		traverser++;
 	}
 }
