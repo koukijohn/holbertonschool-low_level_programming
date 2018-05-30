@@ -10,29 +10,37 @@
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i = 0;
+	size_t x = 0;
 	size_t start = 0;
 	int low = 0;
-	int low_idx = 0;
-	int temp;
+	size_t low_index = 0;
+	int value_holder = 0;
 
-	while (start < size - 1)
+	if (array == NULL)
+		return;
+	if (size < 2)
+		return;
+	while (start < size)
 	{
 		low = array[start];
-		i = 0;
-		while ((i + start) < size)
+		low_index = start;
+		x = 0;  /*resets inner loop position*/
+		while ((x + start) < size)
 		{
-			if (array[i + start] < low)
+			if (array[x + start] < low)
 			{
-				low = array[start + i];
-				low_idx = start + i;
+				low = array[start + x];
+				low_index = start + x;
 			}
-			i++;
+			x++;
 		}
-		temp = array[start];
-		array[start] = array[low_idx];
-		array[low_idx] = temp;
-		print_array(array, size);
+		if (start != low_index)
+		{
+			value_holder = array[start];
+			array[start] = array[low_index];
+			array[low_index] = value_holder;
+			print_array(array, size);
+		}
 		start++;
 	}
 }
