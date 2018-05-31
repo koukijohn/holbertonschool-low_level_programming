@@ -2,13 +2,13 @@
 
 /**
  * inserter - This moves through the linked list.
- * @position: This is the position that we are enter inserting.
+ * @location: This is the location that we are enter inserting.
  * @node: This is the node we are inserting.
  *
  * Return: Void.
  */
 
-void inserter(listint_t *position, listint_t *node)
+void inserter(listint_t *location, listint_t *node)
 {
 /* This removes the node */
 	if (node->next == NULL)
@@ -25,18 +25,18 @@ void inserter(listint_t *position, listint_t *node)
 		node->next->prev = node->prev;
 	}
 /* This will insert the node */
-	if (position->prev == NULL)
+	if (location->prev == NULL)
 	{
 		node->prev = NULL;
-		position->prev = node;
-		node->next = position;
-		position = node;
+		location->prev = node;
+		node->next = location;
+		location = node;
 		return;
 	}
-	position->prev->next = node;
-	node->prev = position->prev;
-	node->next = position;
-	position->prev = node;
+	location->prev->next = node;
+	node->prev = location->prev;
+	node->next = location;
+	location->prev = node;
 }
 
 /**
