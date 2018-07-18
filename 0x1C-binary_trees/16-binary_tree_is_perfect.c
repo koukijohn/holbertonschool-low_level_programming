@@ -1,6 +1,30 @@
 #include "binary_trees.h"
 
 /**
+ * binary_tree_leaves - Counts leaves in a binary tree.
+ * @tree: Pointer to root node of tree to count number of leaves.
+ *
+ * Return: 0 or number of leaves.
+ */
+
+size_t binary_tree_leaves(const binary_tree_t *tree)
+{
+	if (tree == NULL)
+	{
+		return (0);
+	}
+	if (tree->left == NULL && tree->right == NULL)
+	{
+		return (1);
+	}
+	else
+	{
+		return (binary_tree_leaves(tree->left) +
+			binary_tree_leaves(tree->right));
+	}
+}
+
+/**
  * binary_tree_height - Measures the height of a binary tree.
  * @tree: Pointer to root node of tree to measure height.
  *
@@ -30,54 +54,6 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	}
 }
 
-
-/**
- * binary_tree_balance - Measures balance factor of binary tree.
- * @tree: Pointer to root node of tree to measure balance factor.
- *
- * Return: 0.
- */
-
-int binary_tree_balance(const binary_tree_t *tree)
-{
-	int left_subtree;
-	int right_subtree;
-
-	if (tree == NULL)
-	{
-		return (0);
-	}
-	left_subtree = binary_tree_height(tree->left);
-	right_subtree = binary_tree_height(tree->right);
-	return (left_subtree - right_subtree);
-	/* balance factor is height(left_subtree) - height(right_subtree)*/
-}
-
-/**
- * binary_tree_is_full - Checks if binary tree is full.
- * @tree: Pointer to root node of tree to check.
- *
- * Return: 0 for False, 1 for True.
- */
-
-int binary_tree_is_full(const binary_tree_t *tree)
-{
-	if (tree == NULL)
-	{
-		return (1);
-	}
-	if (tree->left == NULL && tree->right == NULL)
-	{
-		return (1);
-	}
-	if (tree->left != NULL && tree->right != NULL)
-	{
-		return (binary_tree_is_full(tree->left) &&
-			binary_tree_is_full(tree->right));
-	}
-	return (0);
-}
-
 /**
  * binary_tree_is_perfect - Checks if binary tree if perfect.
  * @tree: Pointer to root node of tree to check.
@@ -87,14 +63,27 @@ int binary_tree_is_full(const binary_tree_t *tree)
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
+	size_t leaves = 0, height = 0, leaf_level = 0, power = 1;
+
 	if (tree == NULL)
 	{
 		return (0);
 	}
-	if (binary_tree_balance(tree) == 0 && binary_tree_is_full(tree) &&
-	    binary_tree_height(tree->left) == binary_tree_height(tree->right))
+
+	leaves = binary_tree_leaves(tree);
+	height = binary_tree_height(tree);
+
+	while (leaf_level < height)
+	{
+		power = 2 * power;
+		leaf_level++;
+	}
+	if (leaves == power)
 	{
 		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
