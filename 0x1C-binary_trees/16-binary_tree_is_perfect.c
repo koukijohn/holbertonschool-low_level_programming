@@ -7,7 +7,6 @@
  * Return: Height of binary tree.
  */
 
-
 size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t left_subtree;
@@ -30,6 +29,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		return (right_subtree + 1);
 	}
 }
+
 
 /**
  * binary_tree_balance - Measures balance factor of binary tree.
