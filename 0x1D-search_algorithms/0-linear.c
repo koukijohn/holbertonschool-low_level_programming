@@ -20,7 +20,7 @@ int linear_search(int *array, size_t size, int value)
 		       array[counter]);
 		if (value == array[counter])
 		{
-			return (1);
+			return (counter);
 		}
 		counter++;
 	}
