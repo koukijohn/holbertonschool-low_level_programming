@@ -48,7 +48,7 @@ int b_search(int *array, size_t beginning, size_t ending, int value)
 }
 
 /**
- * binary_search - This is a function that searches for a value in an array
+ * advanced_binary - This is a function that searches for a value in an array
  * of integers using the Binary search algorithm.
  * @array: This is a pointer to the first element of the array to search in.
  * @size: This is the number of elements in array.
