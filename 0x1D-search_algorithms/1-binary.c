@@ -14,6 +14,7 @@ void printer(int *array, size_t Left, size_t Right)
 {
 	size_t index = 0;
 
+
 	printf("Searching in array: ");
 	for (index = Left; index < Right; index++)
 	{
@@ -38,6 +39,12 @@ int binary_search(int *array, size_t size, int value)
 	size_t Left = 0;
 	size_t Right = size - 1;
 	size_t midpoint = 0;
+
+
+	if (array == NULL)
+	{
+		return (-1);
+	}
 
 	while (Left <= Right)
 	{
