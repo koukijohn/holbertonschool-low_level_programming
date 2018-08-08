@@ -12,13 +12,14 @@
 
 void printer(int *array, size_t Left, size_t Right)
 {
-	size_t index = 0;
+	size_t index = Left;
 
 
 	printf("Searching in array: ");
-	for (index = Left; index < Right; index++)
+	while (index < Right)
 	{
 		printf("%d, ", array[index]);
+			index++;
 	}
 	printf("%d\n", array[index]);
 }
@@ -66,6 +67,7 @@ int binary_search(int *array, size_t size, int value)
 		{
 			return (midpoint);
 		}
+
 	}
 	return (-1);
 }
